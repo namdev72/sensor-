@@ -1,0 +1,699 @@
+{
+    "version": 1,
+    "author": "Smart Farm",
+    "editor": "wokwi",
+    "parts": [
+        {
+            "type": "wokwi-pi-pico",
+            "id": "pico",
+            "top": 0,
+            "left": 0,
+            "attrs": {}
+        },
+        {
+            "type": "board-ssd1306",
+            "id": "oled",
+            "top": -20,
+            "left": -470,
+            "attrs": {
+                "i2c-address": "0x3C"
+            }
+        },
+        {
+            "type": "wokwi-dht22",
+            "id": "dht",
+            "top": 150,
+            "left": -470,
+            "attrs": {
+                "temperature": "26",
+                "humidity": "60"
+            }
+        },
+        {
+            "type": "wokwi-pushbutton",
+            "id": "btnReq",
+            "top": 40,
+            "left": -280,
+            "attrs": {
+                "color": "green"
+            }
+        },
+        {
+            "type": "wokwi-pushbutton",
+            "id": "btnValid",
+            "top": 100,
+            "left": -280,
+            "attrs": {
+                "color": "blue"
+            }
+        },
+        {
+            "type": "wokwi-pushbutton",
+            "id": "btnInvalid",
+            "top": 160,
+            "left": -280,
+            "attrs": {
+                "color": "red"
+            }
+        },
+        {
+            "type": "wokwi-pushbutton",
+            "id": "btnAck",
+            "top": 220,
+            "left": -280,
+            "attrs": {
+                "color": "yellow"
+            }
+        },
+        {
+            "type": "wokwi-pushbutton",
+            "id": "btnFail",
+            "top": 280,
+            "left": -280,
+            "attrs": {
+                "color": "orange"
+            }
+        },
+        {
+            "type": "wokwi-led",
+            "id": "lAg",
+            "top": -300,
+            "left": -640,
+            "attrs": {
+                "color": "green"
+            }
+        },
+        {
+            "type": "wokwi-resistor",
+            "id": "r_lAg",
+            "top": -200,
+            "left": -640,
+            "attrs": {
+                "value": "220"
+            },
+            "rotate": 90
+        },
+        {
+            "type": "wokwi-led",
+            "id": "lAy",
+            "top": -300,
+            "left": -595,
+            "attrs": {
+                "color": "yellow"
+            }
+        },
+        {
+            "type": "wokwi-resistor",
+            "id": "r_lAy",
+            "top": -200,
+            "left": -595,
+            "attrs": {
+                "value": "220"
+            },
+            "rotate": 90
+        },
+        {
+            "type": "wokwi-led",
+            "id": "lAr",
+            "top": -300,
+            "left": -550,
+            "attrs": {
+                "color": "red"
+            }
+        },
+        {
+            "type": "wokwi-resistor",
+            "id": "r_lAr",
+            "top": -200,
+            "left": -550,
+            "attrs": {
+                "value": "220"
+            },
+            "rotate": 90
+        },
+        {
+            "type": "wokwi-led",
+            "id": "lBg",
+            "top": -300,
+            "left": -505,
+            "attrs": {
+                "color": "green"
+            }
+        },
+        {
+            "type": "wokwi-resistor",
+            "id": "r_lBg",
+            "top": -200,
+            "left": -505,
+            "attrs": {
+                "value": "220"
+            },
+            "rotate": 90
+        },
+        {
+            "type": "wokwi-led",
+            "id": "lBy",
+            "top": -300,
+            "left": -460,
+            "attrs": {
+                "color": "yellow"
+            }
+        },
+        {
+            "type": "wokwi-resistor",
+            "id": "r_lBy",
+            "top": -200,
+            "left": -460,
+            "attrs": {
+                "value": "220"
+            },
+            "rotate": 90
+        },
+        {
+            "type": "wokwi-led",
+            "id": "lBr",
+            "top": -300,
+            "left": -415,
+            "attrs": {
+                "color": "red"
+            }
+        },
+        {
+            "type": "wokwi-resistor",
+            "id": "r_lBr",
+            "top": -200,
+            "left": -415,
+            "attrs": {
+                "value": "220"
+            },
+            "rotate": 90
+        },
+        {
+            "type": "wokwi-led",
+            "id": "lN3",
+            "top": -300,
+            "left": -370,
+            "attrs": {
+                "color": "blue"
+            }
+        },
+        {
+            "type": "wokwi-resistor",
+            "id": "r_lN3",
+            "top": -200,
+            "left": -370,
+            "attrs": {
+                "value": "220"
+            },
+            "rotate": 90
+        },
+        {
+            "type": "wokwi-led",
+            "id": "lCr",
+            "top": -300,
+            "left": -325,
+            "attrs": {
+                "color": "red"
+            }
+        },
+        {
+            "type": "wokwi-resistor",
+            "id": "r_lCr",
+            "top": -200,
+            "left": -325,
+            "attrs": {
+                "value": "220"
+            },
+            "rotate": 90
+        },
+        {
+            "type": "wokwi-led",
+            "id": "lCy",
+            "top": -300,
+            "left": -280,
+            "attrs": {
+                "color": "yellow"
+            }
+        },
+        {
+            "type": "wokwi-resistor",
+            "id": "r_lCy",
+            "top": -200,
+            "left": -280,
+            "attrs": {
+                "value": "220"
+            },
+            "rotate": 90
+        },
+        {
+            "type": "wokwi-led",
+            "id": "lCg",
+            "top": -300,
+            "left": -235,
+            "attrs": {
+                "color": "green"
+            }
+        },
+        {
+            "type": "wokwi-resistor",
+            "id": "r_lCg",
+            "top": -200,
+            "left": -235,
+            "attrs": {
+                "value": "220"
+            },
+            "rotate": 90
+        },
+        {
+            "type": "wokwi-potentiometer",
+            "id": "potA",
+            "top": 20,
+            "left": 260,
+            "attrs": {}
+        },
+        {
+            "type": "wokwi-potentiometer",
+            "id": "potB",
+            "top": 120,
+            "left": 260,
+            "attrs": {}
+        },
+        {
+            "type": "wokwi-potentiometer",
+            "id": "potRes",
+            "top": 220,
+            "left": 260,
+            "attrs": {}
+        },
+        {
+            "type": "wokwi-buzzer",
+            "id": "buz",
+            "top": -120,
+            "left": 260,
+            "attrs": {
+                "volume": "0.1"
+            }
+        },
+        {
+            "type": "wokwi-servo",
+            "id": "valve",
+            "top": 330,
+            "left": 260,
+            "attrs": {}
+        },
+        {
+            "type": "wokwi-servo",
+            "id": "flap",
+            "top": 440,
+            "left": 260,
+            "attrs": {}
+        }
+    ],
+    "connections": [
+        [
+            "pico:GP0",
+            "oled:SDA",
+            "blue",
+            []
+        ],
+        [
+            "pico:GP1",
+            "oled:SCL",
+            "yellow",
+            []
+        ],
+        [
+            "pico:3V3",
+            "oled:VCC",
+            "red",
+            []
+        ],
+        [
+            "pico:GND.1",
+            "oled:GND",
+            "black",
+            []
+        ],
+        [
+            "pico:GP2",
+            "dht:SDA",
+            "green",
+            []
+        ],
+        [
+            "pico:3V3",
+            "dht:VCC",
+            "red",
+            []
+        ],
+        [
+            "pico:GND.2",
+            "dht:GND",
+            "black",
+            []
+        ],
+        [
+            "pico:GP3",
+            "btnReq:1.l",
+            "green",
+            []
+        ],
+        [
+            "btnReq:2.l",
+            "pico:GND.3",
+            "black",
+            []
+        ],
+        [
+            "pico:GP4",
+            "btnValid:1.l",
+            "green",
+            []
+        ],
+        [
+            "btnValid:2.l",
+            "pico:GND.4",
+            "black",
+            []
+        ],
+        [
+            "pico:GP5",
+            "btnInvalid:1.l",
+            "green",
+            []
+        ],
+        [
+            "btnInvalid:2.l",
+            "pico:GND.5",
+            "black",
+            []
+        ],
+        [
+            "pico:GP6",
+            "btnAck:1.l",
+            "green",
+            []
+        ],
+        [
+            "btnAck:2.l",
+            "pico:GND.6",
+            "black",
+            []
+        ],
+        [
+            "pico:GP7",
+            "btnFail:1.l",
+            "green",
+            []
+        ],
+        [
+            "btnFail:2.l",
+            "pico:GND.7",
+            "black",
+            []
+        ],
+        [
+            "pico:GP8",
+            "r_lAg:1",
+            "green",
+            []
+        ],
+        [
+            "r_lAg:2",
+            "lAg:A",
+            "green",
+            []
+        ],
+        [
+            "lAg:C",
+            "pico:GND.8",
+            "black",
+            []
+        ],
+        [
+            "pico:GP9",
+            "r_lAy:1",
+            "green",
+            []
+        ],
+        [
+            "r_lAy:2",
+            "lAy:A",
+            "green",
+            []
+        ],
+        [
+            "lAy:C",
+            "pico:GND.1",
+            "black",
+            []
+        ],
+        [
+            "pico:GP10",
+            "r_lAr:1",
+            "green",
+            []
+        ],
+        [
+            "r_lAr:2",
+            "lAr:A",
+            "green",
+            []
+        ],
+        [
+            "lAr:C",
+            "pico:GND.2",
+            "black",
+            []
+        ],
+        [
+            "pico:GP11",
+            "r_lBg:1",
+            "green",
+            []
+        ],
+        [
+            "r_lBg:2",
+            "lBg:A",
+            "green",
+            []
+        ],
+        [
+            "lBg:C",
+            "pico:GND.3",
+            "black",
+            []
+        ],
+        [
+            "pico:GP12",
+            "r_lBy:1",
+            "green",
+            []
+        ],
+        [
+            "r_lBy:2",
+            "lBy:A",
+            "green",
+            []
+        ],
+        [
+            "lBy:C",
+            "pico:GND.4",
+            "black",
+            []
+        ],
+        [
+            "pico:GP13",
+            "r_lBr:1",
+            "green",
+            []
+        ],
+        [
+            "r_lBr:2",
+            "lBr:A",
+            "green",
+            []
+        ],
+        [
+            "lBr:C",
+            "pico:GND.5",
+            "black",
+            []
+        ],
+        [
+            "pico:GP14",
+            "r_lN3:1",
+            "green",
+            []
+        ],
+        [
+            "r_lN3:2",
+            "lN3:A",
+            "green",
+            []
+        ],
+        [
+            "lN3:C",
+            "pico:GND.6",
+            "black",
+            []
+        ],
+        [
+            "pico:GP15",
+            "r_lCr:1",
+            "green",
+            []
+        ],
+        [
+            "r_lCr:2",
+            "lCr:A",
+            "green",
+            []
+        ],
+        [
+            "lCr:C",
+            "pico:GND.7",
+            "black",
+            []
+        ],
+        [
+            "pico:GP19",
+            "r_lCy:1",
+            "green",
+            []
+        ],
+        [
+            "r_lCy:2",
+            "lCy:A",
+            "green",
+            []
+        ],
+        [
+            "lCy:C",
+            "pico:GND.8",
+            "black",
+            []
+        ],
+        [
+            "pico:GP20",
+            "r_lCg:1",
+            "green",
+            []
+        ],
+        [
+            "r_lCg:2",
+            "lCg:A",
+            "green",
+            []
+        ],
+        [
+            "lCg:C",
+            "pico:GND.1",
+            "black",
+            []
+        ],
+        [
+            "pico:GP26",
+            "potA:SIG",
+            "orange",
+            []
+        ],
+        [
+            "pico:3V3",
+            "potA:VCC",
+            "red",
+            []
+        ],
+        [
+            "pico:GND.2",
+            "potA:GND",
+            "black",
+            []
+        ],
+        [
+            "pico:GP27",
+            "potB:SIG",
+            "orange",
+            []
+        ],
+        [
+            "pico:3V3",
+            "potB:VCC",
+            "red",
+            []
+        ],
+        [
+            "pico:GND.3",
+            "potB:GND",
+            "black",
+            []
+        ],
+        [
+            "pico:GP28",
+            "potRes:SIG",
+            "orange",
+            []
+        ],
+        [
+            "pico:3V3",
+            "potRes:VCC",
+            "red",
+            []
+        ],
+        [
+            "pico:GND.4",
+            "potRes:GND",
+            "black",
+            []
+        ],
+        [
+            "pico:GP16",
+            "buz:2",
+            "green",
+            []
+        ],
+        [
+            "pico:GND.5",
+            "buz:1",
+            "black",
+            []
+        ],
+        [
+            "pico:GP17",
+            "valve:PWM",
+            "orange",
+            []
+        ],
+        [
+            "pico:VBUS",
+            "valve:V+",
+            "red",
+            []
+        ],
+        [
+            "pico:GND.6",
+            "valve:GND",
+            "black",
+            []
+        ],
+        [
+            "pico:GP18",
+            "flap:PWM",
+            "orange",
+            []
+        ],
+        [
+            "pico:VBUS",
+            "flap:V+",
+            "red",
+            []
+        ],
+        [
+            "pico:GND.7",
+            "flap:GND",
+            "black",
+            []
+        ]
+    ],
+    "dependencies": {}
+}
